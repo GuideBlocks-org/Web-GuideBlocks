@@ -20,7 +20,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@contextual/web-guideblocks-nps": ["packages/nps/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
