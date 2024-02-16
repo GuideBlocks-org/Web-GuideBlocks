@@ -21,6 +21,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@contextual/web-guideblocks-core": ["packages/core/src/index.ts"],
       "@contextual/web-guideblocks-nps": ["packages/nps/src/index.ts"]
     }
   },
