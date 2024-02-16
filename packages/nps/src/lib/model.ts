@@ -1,4 +1,4 @@
-import { valueUnit } from '@pointzi-js/shared/util-functions';
+import { valueUnit } from '@contextual/web-guideblocks-core';
 
 class FeedbackElementBase<T> {
   c?: Array<string>;

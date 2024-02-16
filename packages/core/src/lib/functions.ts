@@ -35,3 +35,15 @@ export function buildEvent(type: string, options?: CustomEventInit) {
 export function clearStyle(style: CSSStyleDeclaration) {
   style.cssText = '';
 }
+
+export function valueUnit<T extends string>(
+  value: number | string | undefined,
+  unit?: T
+): T extends string ? string | undefined : string | number | undefined {
+  return typeof value == 'number' ||
+    (typeof value == 'string' && value.length > 0)
+    ? unit
+      ? value + unit
+      : value
+    : ('' as any);
+}
