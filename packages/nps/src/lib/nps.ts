@@ -32,7 +32,7 @@ export enum Events {
   Submit = 'ctxSubmit',
 }
 
-@customElement('pz-nps')
+@customElement('ctx-nps')
 export class NpsSurveyElement extends CommonElement {
   static override styles = css`
     :host {
@@ -409,6 +409,6 @@ export class NpsSurveyElement extends CommonElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'pz-nps': NpsSurveyElement;
+    'ctx-nps': NpsSurveyElement;
   }
 }

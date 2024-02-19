@@ -3,13 +3,68 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "packages/demo/src",
-  "tags": [],
+  "tags": ["scope:demo", "type:app"],
   "targets": {
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "jestConfig": "packages/demo/jest.config.ts"
+        "outputPath": "dist/packages/demo",
+        "compiler": "babel",
+        "main": "packages/demo/src/main.ts",
+        "tsConfig": "packages/demo/tsconfig.app.json",
+        "assets": [
+          "packages/demo/src/favicon.ico",
+          "packages/demo/src/assets"
+        ],
+        "index": "packages/demo/src/index.html",
+        "baseHref": "/",
+        "polyfills": "packages/demo/src/polyfills.ts",
+        "styles": ["packages/demo/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "fileReplacements": [
+            {
+              "replace": "packages/demo/src/environments/environment.ts",
+              "with": "packages/demo/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "options": {
+        "buildTarget": "demo:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "demo:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/demo/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/demo"],
+      "options": {
+        "jestConfig": "packages/demo/jest.config.ts",
+        "passWithNoTests": true
       }
     }
   }
