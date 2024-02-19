@@ -23,7 +23,8 @@
         "polyfills": "packages/demo/src/polyfills.ts",
         "styles": ["packages/demo/src/styles.css"],
         "scripts": [],
-        "webpackConfig": "packages/demo/webpack.config.js"
+        "webpackConfig": "packages/demo/webpack.config.js",
+        "extractCss": false
       },
       "configurations": {
         "production": {

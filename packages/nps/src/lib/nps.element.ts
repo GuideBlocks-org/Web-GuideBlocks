@@ -1,10 +1,12 @@
-import { html, PropertyValues } from 'lit';
+import { html, PropertyValues, unsafeCSS } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { styleMap } from 'lit/directives/style-map.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { FeedbackElementWeb } from './model';
 import { buildEvent, CommonElement } from '@contextual/web-guideblocks-core';
-import { ELEMENT_CSS } from './nps.element.css';
+import CSS from './nps.element.css';
+
+console.log('test CSS import', CSS);
 
 enum Stage {
   List = 1,
@@ -35,7 +37,7 @@ export enum Events {
 
 @customElement('ctx-nps')
 export class NpsSurveyElement extends CommonElement {
-  static override styles = [ELEMENT_CSS];
+  static override styles = [unsafeCSS(CSS)];
 
   @property() source?: {
     css: any;
@@ -158,7 +160,11 @@ export class NpsSurveyElement extends CommonElement {
         }
       : { label1: {}, label2: {} };
 
-    return html` <div class="options-list-wrapper ${classMap(classes)}">
+    return html` <div
+      class="options-list-wrapper ${classMap(
+        classes
+      )} flex justify-center px-0 py-4"
+    >
       <div>
         <!--Vertical label 1-->
         ${isVertical && this.source?.label

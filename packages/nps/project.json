@@ -11,7 +11,8 @@
         "outputPath": "dist/packages/nps",
         "main": "packages/nps/src/index.ts",
         "tsConfig": "packages/nps/tsconfig.lib.json",
-        "assets": []
+        "assets": [],
+        "compiler": "tsc"
       }
     },
     "publish": {

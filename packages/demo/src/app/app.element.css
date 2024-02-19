@@ -1,18 +1,19 @@
-import { css } from 'lit';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-export const CSS_STR = css`
-  :host {
+:host {
     display: block;
-  }
+}
 
-  h2 {
+h1 {
     text-align: center;
-  }
+}
 
-  .list {
+.list {
     display: flex;
-  }
-  .list-item {
+}
+.list-item {
     display: inline-flex;
     flex-direction: column;
     flex: 50;
@@ -20,5 +21,4 @@ export const CSS_STR = css`
     height: 300px;
     justify-content: center;
     align-items: center;
-  }
-`;
+}
