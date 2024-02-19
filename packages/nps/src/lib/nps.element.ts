@@ -1,9 +1,10 @@
-import { css, html, PropertyValues } from 'lit';
+import { html, PropertyValues } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { styleMap } from 'lit/directives/style-map.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { FeedbackElementWeb } from './model';
 import { buildEvent, CommonElement } from '@contextual/web-guideblocks-core';
+import { ELEMENT_CSS } from './nps.element.css';
 
 enum Stage {
   List = 1,
@@ -34,122 +35,7 @@ export enum Events {
 
 @customElement('ctx-nps')
 export class NpsSurveyElement extends CommonElement {
-  static override styles = css`
-    :host {
-      display: block;
-      position: relative;
-      z-index: 100;
-      pointer-events: all;
-      width: 400px;
-      border: solid 1px red;
-    }
-
-    .options-list-wrapper {
-      display: flex;
-      padding: 16px 0;
-      justify-content: center;
-    }
-
-    .options-list-wrapper.horizontal.has-label {
-    }
-
-    .options-list-wrapper.horizontal .options-list-container {
-      justify-content: center;
-    }
-
-    .options-list-wrapper.vertical .options-list-container {
-      flex-direction: column;
-    }
-
-    .options-list-wrapper.vertical.has-label {
-    }
-
-    .options-list-container {
-      display: flex;
-      position: relative;
-    }
-
-    .option-item {
-      cursor: pointer;
-    }
-
-    .option-item.detractors {
-      color: red !important;
-    }
-
-    .option-item.neutrals {
-      color: orange !important;
-    }
-
-    .option-item.promoters {
-      color: green !important;
-    }
-
-    .title {
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .message {
-      text-align: center;
-    }
-
-    /*Label*/
-
-    .labels-container {
-      display: flex;
-    }
-
-    .label1,
-    .label2 {
-      color: #7d7d7d;
-      font-size: 0.8em;
-      white-space: nowrap;
-    }
-
-    .options-list-wrapper.horizontal.has-label .label1,
-    .options-list-wrapper.horizontal.has-label .label2 {
-      flex: 1;
-    }
-
-    .options-list-wrapper.horizontal.has-label .label1 {
-      padding-right: 16px;
-    }
-
-    .options-list-wrapper.horizontal.has-label .label2 {
-      text-align: right;
-    }
-
-    .options-list-wrapper.vertical.has-label .label1,
-    .options-list-wrapper.vertical.has-label .label2 {
-      text-align: center;
-    }
-
-    /*Custom input*/
-
-    .button-container {
-      display: flex;
-      justify-content: center;
-    }
-
-    #cancel-btn,
-    #submit-btn {
-      padding: 0 8px;
-      margin: 16px;
-      color: #0080ff;
-      border: 0;
-      text-decoration: none;
-      text-transform: uppercase;
-      border-style: solid;
-      background-color: rgba(0, 0, 0, 0);
-      background: none;
-      cursor: pointer;
-    }
-
-    textarea {
-      width: calc(100% - 6px);
-    }
-  `;
+  static override styles = [ELEMENT_CSS];
 
   @property() source?: {
     css: any;
@@ -164,7 +50,6 @@ export class NpsSurveyElement extends CommonElement {
     text: string;
     extra_json: {};
   };
-  @property() platform?: string = Platform.Web;
   @property() disableInteraction?: boolean = false;
   @state() private _stage: Stage = Stage.List;
 
@@ -242,17 +127,13 @@ export class NpsSurveyElement extends CommonElement {
   }
 
   override render() {
-    return this.platform == Platform.Web || this._stage === Stage.List
+    return this._stage === Stage.List
       ? this._getListStageTpl()
       : this._getInputStageTpl();
   }
 
   private _getListStageTpl() {
-    return html`
-      ${this.platform === Platform.Web
-        ? this._getWebTpl()
-        : this._getMobileTpl()}
-    `;
+    return html` ${this._getWebTpl()} `;
   }
 
   private _getWebTpl() {
@@ -316,34 +197,10 @@ export class NpsSurveyElement extends CommonElement {
     </div>`;
   }
 
-  private _getMobileTpl() {
-    return html` ${this.source?.title
-      ? html` <div class="title">${this.source?.title}</div>`
-      : ''}
-    ${this.source?.message
-      ? html` <div class="message">${this.source?.message}</div>`
-      : ''}
-    ${this.source?.c?.map(
-      (item: string) => html`
-        <div
-          class="option-item"
-          style="${styleMap(this.source?.css)}"
-          data-option="${item}"
-        >
-          ${item}
-        </div>
-      `
-    )}`;
-  }
-
   private _getInputStageTpl() {
     return html`
       <div>
-        <p>
-          ${this.platform === Platform.Web
-            ? this.source?.text
-            : html`${DF_CUSTOM_INPUT_TITLE}`}
-        </p>
+        <p>${this.source?.text}</p>
 
         <div id="input-container">
           <textarea

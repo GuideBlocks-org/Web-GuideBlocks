@@ -1,4 +1,4 @@
-const FEEDBACK = {
+export const FEEDBACK = {
   i: 1,
   c: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
   text: 'Thank you for providing feedback!\nPlease share your experience to help improve our service',

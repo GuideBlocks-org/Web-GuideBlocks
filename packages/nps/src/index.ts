@@ -1,1 +1,1 @@
-export * from './lib/nps';
+export * from './lib/nps.element';

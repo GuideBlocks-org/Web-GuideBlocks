@@ -1,10 +1,10 @@
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import { NpsSurveyElement } from '@contextual/web-guideblocks-nps';
 import '@contextual/web-guideblocks-nps';
 import { CSS_STR } from './app.element.css';
+import { FEEDBACK } from './mock';
 
-@customElement('app-root')
+@customElement('ctx-app-root')
 export class AppElement extends LitElement {
   static styles = [CSS_STR];
 
@@ -22,7 +22,7 @@ export class AppElement extends LitElement {
           <div class="list">
             <div class="list-item">
               <h2>NPS</h2>
-              <pz-nps .source="${this.feedbackMockData}"></pz-nps>
+              <ctx-nps .source="${this.feedbackMockData}"></ctx-nps>
             </div>
           </div>
         </div>
@@ -33,6 +33,6 @@ export class AppElement extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'pz-nps': NpsSurveyElement;
+    'ctx-app-root': AppElement;
   }
 }

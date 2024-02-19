@@ -11,7 +11,7 @@
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/packages/demo",
-        "compiler": "babel",
+        "compiler": "tsc",
         "main": "packages/demo/src/main.ts",
         "tsConfig": "packages/demo/tsconfig.app.json",
         "assets": [
@@ -22,7 +22,8 @@
         "baseHref": "/",
         "polyfills": "packages/demo/src/polyfills.ts",
         "styles": ["packages/demo/src/styles.css"],
-        "scripts": []
+        "scripts": [],
+        "webpackConfig": "packages/demo/webpack.config.js"
       },
       "configurations": {
         "production": {
