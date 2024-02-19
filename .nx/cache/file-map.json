@@ -1,0 +1,238 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.0.4",
+  "deps": {
+    "lit": "^3.1.2",
+    "tslib": "^2.3.0",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@nrwl/cli": "14.8.9",
+    "@nrwl/eslint-plugin-nx": "14.8.9",
+    "@nrwl/jest": "14.8.9",
+    "@nrwl/js": "14.8.9",
+    "@nrwl/linter": "14.8.9",
+    "@nrwl/nx-cloud": "latest",
+    "@nrwl/web": "^18.0.4",
+    "@nrwl/webpack": "14.8.9",
+    "@nrwl/workspace": "14.8.9",
+    "@types/jest": "28.1.1",
+    "@types/node": "18.7.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "~8.15.0",
+    "eslint-config-prettier": "8.1.0",
+    "husky": "^8.0.0",
+    "jest": "28.1.1",
+    "jest-environment-jsdom": "28.1.1",
+    "nx": "14.8.9",
+    "prettier": "^2.6.2",
+    "ts-jest": "28.0.5",
+    "ts-node": "10.9.1",
+    "typescript": "~4.8.2"
+  },
+  "pathMappings": {
+    "@contextual/web-guideblocks-core": [
+      "packages/core/src/index.ts"
+    ],
+    "@contextual/web-guideblocks-nps": [
+      "packages/nps/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".commitlintrc.json",
+        "hash": "1599052531228880777"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "6788626961506568020"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "594232218447620138"
+      },
+      {
+        "file": ".husky/commit-msg",
+        "hash": "596447683548285611"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "17733650430415207254"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "4637156562308165301"
+      },
+      {
+        "file": "README.md",
+        "hash": "12919264863117358406"
+      },
+      {
+        "file": "babel.config.json",
+        "hash": "5546405625092116747"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "2950215254536237782"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "2772139696069860212"
+      },
+      {
+        "file": "nx.json",
+        "hash": "15263340371709216336"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "12802321633605812441"
+      },
+      {
+        "file": "package.json",
+        "hash": "6855696889062473754"
+      },
+      {
+        "file": "packages/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tools/generators/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tools/scripts/publish.mjs",
+        "hash": "16260978617766472153"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "16088922570277978783"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "1995011561944349597"
+      }
+    ],
+    "projectFileMap": {
+      "core": [
+        {
+          "file": "packages/core/.eslintrc.json",
+          "hash": "13800677001662881425"
+        },
+        {
+          "file": "packages/core/README.md",
+          "hash": "9420225203192903995"
+        },
+        {
+          "file": "packages/core/jest.config.ts",
+          "hash": "928681144515169996"
+        },
+        {
+          "file": "packages/core/package.json",
+          "hash": "15542283803516864121"
+        },
+        {
+          "file": "packages/core/project.json",
+          "hash": "10547704587492182702"
+        },
+        {
+          "file": "packages/core/src/index.ts",
+          "hash": "4070016594838073512"
+        },
+        {
+          "file": "packages/core/src/lib/common.ts",
+          "hash": "14623610614458952852",
+          "deps": [
+            "npm:lit"
+          ]
+        },
+        {
+          "file": "packages/core/src/lib/constant.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/core/src/lib/functions.ts",
+          "hash": "6580651490292517608"
+        },
+        {
+          "file": "packages/core/tsconfig.json",
+          "hash": "5840880287502376438"
+        },
+        {
+          "file": "packages/core/tsconfig.lib.json",
+          "hash": "11146748992678458315"
+        },
+        {
+          "file": "packages/core/tsconfig.spec.json",
+          "hash": "10595040461224341030"
+        }
+      ],
+      "nps": [
+        {
+          "file": "packages/nps/.eslintrc.json",
+          "hash": "13800677001662881425"
+        },
+        {
+          "file": "packages/nps/README.md",
+          "hash": "11516018437311643011"
+        },
+        {
+          "file": "packages/nps/jest.config.ts",
+          "hash": "4490096854796482315"
+        },
+        {
+          "file": "packages/nps/package.json",
+          "hash": "3130573380606550264"
+        },
+        {
+          "file": "packages/nps/project.json",
+          "hash": "8192490985746017796"
+        },
+        {
+          "file": "packages/nps/src/index.ts",
+          "hash": "711450920122643155"
+        },
+        {
+          "file": "packages/nps/src/lib/model.ts",
+          "hash": "3500312336292196897",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "packages/nps/src/lib/nps.spec.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/nps/src/lib/nps.ts",
+          "hash": "15896881590588800288",
+          "deps": [
+            "npm:lit",
+            "core"
+          ]
+        },
+        {
+          "file": "packages/nps/tsconfig.json",
+          "hash": "5840880287502376438"
+        },
+        {
+          "file": "packages/nps/tsconfig.lib.json",
+          "hash": "11146748992678458315"
+        },
+        {
+          "file": "packages/nps/tsconfig.spec.json",
+          "hash": "10595040461224341030"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+[NX Daemon Server] - 2024-02-19T03:51:13.478Z - Started listening on: \\.\pipe\nx\C:\Users\DELL\AppData\Local\Temp\55bff037c6cb5bf2dfce\d.sock
+[NX Daemon Server] - 2024-02-19T03:51:13.481Z - [WATCHER]: Subscribed to changes within: D:\WebstormProjects\Web-GuideBlocks (native)
+[NX Daemon Server] - 2024-02-19T03:51:13.489Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-02-19T03:51:13.492Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-02-19T03:51:13.492Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-02-19T03:51:13.494Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-02-19T03:51:13.495Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-19T03:51:13.495Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-19T03:51:13.495Z - [REQUEST]: 
+[NX Daemon Server] - 2024-02-19T03:51:13.692Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-02-19T03:51:13.695Z - Time taken for 'total for creating and serializing project graph' 198.26569998264313ms
+[NX Daemon Server] - 2024-02-19T03:51:13.695Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-02-19T03:51:13.695Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 198. Response time: 3.
+[NX Daemon Server] - 2024-02-19T03:51:27.049Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-02-19T03:51:27.049Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-02-19T03:51:27.049Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-02-19T03:51:27.054Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-02-19T03:51:27.054Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-02-19T03:51:27.057Z - Time taken for 'total for creating and serializing project graph' 0.366100013256073ms
+[NX Daemon Server] - 2024-02-19T03:51:27.058Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-02-19T03:51:27.058Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2024-02-19T03:51:27.819Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-19T03:51:27.821Z - [WATCHER]: 26 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-02-19T03:51:27.931Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-02-19T03:51:27.932Z - [REQUEST]: packages/demo-e2e/.eslintrc.json,packages/demo/src/app/app.element.scss,packages/demo/.swcrc,packages/demo/tsconfig.json,packages/demo-e2e/src/support/e2e.ts,packages/demo/src/main.ts,packages/demo/jest.config.ts,packages/demo-e2e/src/support/app.po.ts,packages/demo/src/assets/.gitkeep,packages/demo-e2e/project.json,packages/demo/tsconfig.app.json,packages/demo/src/app/app.element.ts,packages/demo/src/favicon.ico,packages/demo-e2e/src/fixtures/example.json,packages/demo-e2e/cypress.config.ts,packages/demo/project.json,packages/demo/src/test-setup.ts,packages/demo-e2e/tsconfig.json,packages/demo-e2e/src/e2e/app.cy.ts,packages/demo/src/app/app.element.spec.ts,packages/demo-e2e/src/support/commands.ts,packages/demo/src/styles.scss,packages/demo/tsconfig.spec.json,packages/demo/webpack.config.js,packages/demo/src/index.html,packages/demo/.eslintrc.json,package.json,nx.json
+[NX Daemon Server] - 2024-02-19T03:51:27.932Z - [REQUEST]: 
+Unable to create nodes for packages/demo-e2e/cypress.config.ts using plugin @nx/cypress/plugin. 
+
+	 Inner Error: TSError: ⨯ Unable to compile TypeScript:
+error TS6046: Argument for '--moduleResolution' option must be: 'node', 'classic', 'node16', 'nodenext'.
+
+    at createTSError (C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\ts-node\src\index.ts:863:19)
+    at createFromPreloadedConfig (C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\ts-node\src\index.ts:874:36)
+    at create (C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\ts-node\src\index.ts:624:10)
+    at register (C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\ts-node\src\index.ts:591:15)
+    at getTsNodeTranspiler (C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\nx\src\plugins\js\utils\register.js:47:21)
+    at C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\nx\src\plugins\js\utils\register.js:78:22
+    at registerTranspiler (C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\nx\src\plugins\js\utils\register.js:97:12)
+    at registerTsProject (C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\nx\src\plugins\js\utils\register.js:15:9)
+    at loadConfigFile (C:\Users\DELL\AppData\Local\Temp\tmp-6824-cGzjVtmLusis\node_modules\@nx\devkit\src\utils\config-utils.js:18:45)
+[NX Daemon Server] - 2024-02-19T03:51:30.504Z - Time taken for 'hash changed files from watcher' 0.9251999855041504ms
+[NX Daemon Server] - 2024-02-19T03:52:59.245Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-02-19T03:52:59.246Z - [WATCHER]: Stopping the watcher for D:\WebstormProjects\Web-GuideBlocks (sources)
+[NX Daemon Server] - 2024-02-19T03:52:59.246Z - [WATCHER]: Stopping the watcher for D:\WebstormProjects\Web-GuideBlocks (outputs)
+[NX Daemon Server] - 2024-02-19T03:52:59.246Z - Server stopped because: "Lock file changed"
