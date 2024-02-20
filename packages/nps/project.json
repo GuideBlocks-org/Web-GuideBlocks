@@ -12,7 +12,9 @@
         "main": "packages/nps/src/index.ts",
         "tsConfig": "packages/nps/tsconfig.lib.json",
         "assets": [],
-        "compiler": "tsc"
+        "compiler": "tsc",
+        "runtimeChunk": false,
+        "vendorChunk": false
       }
     },
     "publish": {
