@@ -6,8 +6,6 @@ import { FeedbackElementWeb } from './model';
 import { buildEvent, CommonElement } from '@contextual/web-guideblocks-core';
 import CSS from './nps.element.css';
 
-console.log('test CSS import', CSS);
-
 enum Stage {
   List = 1,
   Input,
@@ -160,11 +158,7 @@ export class NpsSurveyElement extends CommonElement {
         }
       : { label1: {}, label2: {} };
 
-    return html` <div
-      class="options-list-wrapper ${classMap(
-        classes
-      )} flex justify-center px-0 py-4"
-    >
+    return html` <div class="options-list-wrapper ${classMap(classes)}">
       <div>
         <!--Vertical label 1-->
         ${isVertical && this.source?.label

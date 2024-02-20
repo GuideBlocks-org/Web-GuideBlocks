@@ -13,15 +13,17 @@ export class AppElement extends LitElement {
 
   protected render() {
     return html`
-      <div class="wrapper flex">
-        <div class="container mx-auto px-4 py-4">
+      <div>
+        <div class="container p-4">
           <!--  WELCOME  -->
           <div id="welcome">
-            <h1>Guideblocks Preview</h1>
+            <h1 class="text-center">Guideblocks Preview</h1>
           </div>
 
-          <div class="list">
-            <div class="list-item">
+          <div class="flex">
+            <div
+              class="inline-flex flex-col w-1/2 h-80 justify-center items-center"
+            >
               <h2>NPS</h2>
               <ctx-nps .source="${this.feedbackMockData}"></ctx-nps>
             </div>

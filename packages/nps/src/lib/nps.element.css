@@ -2,41 +2,32 @@
 
 
   :host {
-    display: block;
-    position: relative;
-    z-index: 100;
-    pointer-events: all;
-    width: 400px;
-    border: solid 1px red;
-    background-color: white;
-    padding: 24px 32px;
+    @apply block relative
+      z-100 pointer-events-auto w-96
+      border-solid border-2 border-red-600
+      bg-white
+      py-6 px-8;
   }
 
   .options-list-wrapper {
-
+    @apply flex justify-center px-0 py-4;
   }
 
-  .options-list-wrapper.horizontal.has-label {
-  }
 
   .options-list-wrapper.horizontal .options-list-container {
-    justify-content: center;
+    @apply justify-center
   }
 
   .options-list-wrapper.vertical .options-list-container {
-    flex-direction: column;
-  }
-
-  .options-list-wrapper.vertical.has-label {
+    @apply flex-col
   }
 
   .options-list-container {
-    display: flex;
-    position: relative;
+    @apply flex relative
   }
 
   .option-item {
-    cursor: pointer;
+    @apply cursor-pointer
   }
 
   .option-item.detractors {
@@ -52,64 +43,58 @@
   }
 
   .title {
-    font-weight: bold;
-    text-align: center;
+    @apply font-bold text-center
   }
 
   .message {
-    text-align: center;
+    @apply text-center
   }
 
   /*Label*/
 
   .labels-container {
-    display: flex;
+    @apply flex
   }
 
   .label1,
   .label2 {
+    @apply text-sm whitespace-nowrap;
     color: #7d7d7d;
-    font-size: 0.8em;
-    white-space: nowrap;
   }
 
   .options-list-wrapper.horizontal.has-label .label1,
   .options-list-wrapper.horizontal.has-label .label2 {
-    flex: 1;
+    @apply flex-1
   }
 
   .options-list-wrapper.horizontal.has-label .label1 {
-    padding-right: 16px;
+    @apply pr-4;
   }
 
   .options-list-wrapper.horizontal.has-label .label2 {
-    text-align: right;
+    @apply text-right
   }
 
   .options-list-wrapper.vertical.has-label .label1,
   .options-list-wrapper.vertical.has-label .label2 {
-    text-align: center;
+    @apply text-center
   }
 
   /*Custom input*/
 
   .button-container {
-    display: flex;
-    justify-content: center;
+    @apply flex justify-center
   }
 
   #cancel-btn,
   #submit-btn {
-    padding: 0 8px;
-    margin: 16px;
+    @apply py-0 px-2 m-4
+      border-0 border-solid
+      decoration-0 uppercase
+      cursor-pointer
+      bg-none;
+
     color: #0080ff;
-    border: 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-style: solid;
-    background-color: rgba(0, 0, 0, 0);
-    background: none;
-    cursor: pointer;
   }
 
   textarea {
