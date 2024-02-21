@@ -92,7 +92,7 @@
       border-0 border-solid
       decoration-0 uppercase
       cursor-pointer
-      bg-none;
+      bg-none bg-transparent;
 
     color: #0080ff;
   }

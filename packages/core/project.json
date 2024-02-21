@@ -5,18 +5,31 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/webpack:webpack",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/packages/core",
         "main": "packages/core/src/index.ts",
-        "tsConfig": "packages/core/tsconfig.lib.json",
-        "webpackConfig": "packages/core/webpack.config.js",
-        "assets": [],
+        "outputPath": "dist/packages/core",
         "compiler": "tsc",
-        "runtimeChunk": false,
-        "vendorChunk": false,
-        "externalDependencies": ["lit"]
+        "tsConfig": "packages/core/tsconfig.lib.json",
+        "project": "packages/core/package.json",
+        "assets": [
+          {
+            "glob": "packages/core/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
       }
     },
     "publish": {

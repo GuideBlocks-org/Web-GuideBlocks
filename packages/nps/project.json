@@ -5,24 +5,33 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/webpack:webpack",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/packages/nps",
         "main": "packages/nps/src/index.ts",
-        "tsConfig": "packages/nps/tsconfig.lib.json",
-        "webpackConfig": "packages/nps/webpack.config.js",
-        "assets": [],
+        "outputPath": "dist/packages/nps",
         "compiler": "tsc",
-        "runtimeChunk": false,
-        "vendorChunk": false,
-        "externalDependencies": [
-          "lit",
-          "lit/decorators.js",
-          "lit/directives/style-map.js",
-          "lit/directives/class-map.js",
-          "@contextual/web-guideblocks-core"
+        "tsConfig": "packages/nps/tsconfig.lib.json",
+        "rollupConfig": "packages/nps/rollup.config.js",
+        "project": "packages/nps/package.json",
+        "extractCss": false,
+        "assets": [
+          {
+            "glob": "packages/nps/README.md",
+            "input": ".",
+            "output": "."
+          }
         ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
       }
     },
     "publish": {

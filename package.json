@@ -19,6 +19,7 @@
     "@nrwl/linter": "14.8.9",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "^18.0.4",
+    "@nrwl/rollup": "^14.8.9",
     "@nrwl/web": "14.8.9",
     "@nrwl/webpack": "14.8.9",
     "@nrwl/workspace": "14.8.9",
