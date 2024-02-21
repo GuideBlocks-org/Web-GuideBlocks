@@ -14,16 +14,13 @@
         "compiler": "tsc",
         "main": "packages/demo/src/main.ts",
         "tsConfig": "packages/demo/tsconfig.app.json",
-        "assets": [
-          "packages/demo/src/favicon.ico",
-          "packages/demo/src/assets"
-        ],
+        "webpackConfig": "packages/demo/webpack.config.js",
+        "assets": ["packages/demo/src/favicon.ico", "packages/demo/src/assets"],
         "index": "packages/demo/src/index.html",
         "baseHref": "/",
         "polyfills": "packages/demo/src/polyfills.ts",
         "styles": ["packages/demo/src/styles.css"],
         "scripts": [],
-        "webpackConfig": "packages/demo/webpack.config.js",
         "extractCss": false
       },
       "configurations": {

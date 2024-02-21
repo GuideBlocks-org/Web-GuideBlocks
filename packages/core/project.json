@@ -11,15 +11,12 @@
         "outputPath": "dist/packages/core",
         "main": "packages/core/src/index.ts",
         "tsConfig": "packages/core/tsconfig.lib.json",
+        "webpackConfig": "packages/core/webpack.config.js",
         "assets": [],
         "compiler": "tsc",
         "runtimeChunk": false,
-        "vendorChunk": false
-      },
-      "configurations": {
-        "production": {
-          "generatePackageJson": true
-        }
+        "vendorChunk": false,
+        "externalDependencies": ["lit"]
       }
     },
     "publish": {

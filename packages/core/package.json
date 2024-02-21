@@ -1,5 +1,11 @@
 {
   "name": "@contextual/web-guideblocks-core",
   "version": "0.0.1",
-  "type": "commonjs"
+  "type": "commonjs",
+  "peerDependencies": {
+    "lit": "^2.7.0 || ^3.0.0",
+    "tslib": "^2.3.0"
+  },
+  "main": "main.js",
+  "types": "src/index.d.ts"
 }

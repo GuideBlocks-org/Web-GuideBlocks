@@ -11,6 +11,8 @@ import { readCachedProjectGraph } from '@nrwl/devkit';
 import { execSync } from 'child_process';
 import { readFileSync, writeFileSync } from 'fs';
 import chalk from 'chalk';
+import { copyFileSync } from 'node:fs';
+import path from 'node:path';
 
 function invariant(condition, message) {
   if (!condition) {
@@ -43,6 +45,10 @@ invariant(
   outputPath,
   `Could not find "build.options.outputPath" of project "${name}". Is project.json configured  correctly?`
 );
+
+// Copy package.json file to outputPath
+const packageJsonPath = path.normalize(project.data.sourceRoot + '/../package.json');
+copyFileSync(packageJsonPath, path.join(outputPath, 'package.json'));
 
 process.chdir(outputPath);
 

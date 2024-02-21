@@ -11,15 +11,18 @@
         "outputPath": "dist/packages/nps",
         "main": "packages/nps/src/index.ts",
         "tsConfig": "packages/nps/tsconfig.lib.json",
+        "webpackConfig": "packages/nps/webpack.config.js",
         "assets": [],
         "compiler": "tsc",
         "runtimeChunk": false,
-        "vendorChunk": false
-      },
-      "configurations": {
-        "production": {
-          "generatePackageJson": true
-        }
+        "vendorChunk": false,
+        "externalDependencies": [
+          "lit",
+          "lit/decorators.js",
+          "lit/directives/style-map.js",
+          "lit/directives/class-map.js",
+          "@contextual/web-guideblocks-core"
+        ]
       }
     },
     "publish": {

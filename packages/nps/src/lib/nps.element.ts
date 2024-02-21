@@ -60,7 +60,7 @@ export class NpsSurveyElement extends CommonElement {
 
   private _selected?: string;
 
-  protected override createRenderRoot(): HTMLElement | DocumentFragment {
+  protected override createRenderRoot(): Element | ShadowRoot {
     const root = super.createRenderRoot();
 
     root.addEventListener('click', (event) => {

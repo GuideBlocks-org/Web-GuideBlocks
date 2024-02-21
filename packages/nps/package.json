@@ -1,5 +1,12 @@
 {
   "name": "@contextual/web-guideblocks-nps",
   "version": "0.0.1",
-  "type": "commonjs"
+  "type": "commonjs",
+  "peerDependencies": {
+    "lit": "^2.7.0 || ^3.0.0",
+    "tslib": "^2.3.0",
+    "@contextual/web-guideblocks-core": "^1.0.0-alpha.8"
+  },
+  "main": "main.js",
+  "types": "src/index.d.ts"
 }
